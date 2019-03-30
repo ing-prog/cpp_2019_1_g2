@@ -21,3 +21,40 @@
 
 //Output
 //aba acbaa abba
+
+
+#include <iostream>     
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+void FindX(int A, int B, int C)
+{
+	if (A != 0){
+
+		int D = (B*B) - (4 * A*C);
+
+		if (D < 0) {
+
+			cout << "there are no any square roots" << endl;
+		}
+		else if (D == 0) {
+
+			float X = -B / (2 * A);
+			cout << "X = " << X << endl;
+		}
+		else {
+
+			float X1 = (-B + sqrt(D)) / (2 * A);
+			float X2 = (-B - sqrt(D)) / (2 * A);
+			cout << "X1 = " << X1 << "; X2 = " << X2 << endl;
+		}
+	}
+	else{
+
+		float X = -C / B;
+		cout << "X = " << X << endl;
+	}
+	
+}
